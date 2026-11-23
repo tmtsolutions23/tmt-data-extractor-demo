@@ -19,6 +19,11 @@ const NAV_LINKS: NavLink[] = [
     label: "Booking Site",
     external: true,
   },
+  {
+    href: "https://github.com/tmtsolutions23",
+    label: "GitHub",
+    external: true,
+  },
 ];
 
 export default function Header() {
