@@ -12,7 +12,6 @@ type NavLink = {
 
 const NAV_LINKS: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/extract", label: "Document Extract" },
   { href: "/intake", label: "Client Intake" },
   {
     href: "https://dafonte-booking.vercel.app/",

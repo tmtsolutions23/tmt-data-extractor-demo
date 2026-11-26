@@ -12,6 +12,7 @@ import {
   ExternalLink,
   RefreshCw,
   CalendarCheck,
+  Radar,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,8 +23,8 @@ const SERVICES = [
     title: "AI Document Processing",
     description:
       "Extract structured data from invoices, contracts, and forms in seconds. Upload one or fifty — get clean, export-ready results.",
-    href: "/extract",
-    cta: "Try the demo",
+    href: null,
+    cta: null,
   },
   {
     icon: MessageSquare,
@@ -155,16 +156,16 @@ export default function LandingPage() {
                 </span>
               </h3>
               <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-                Two flagship platforms built from the ground up — shipping to
+                Three flagship platforms built from the ground up — shipping to
                 real customers today.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-5 sm:gap-6">
+            <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
               <a
                 href="https://libalexandria.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col rounded-3xl border border-white/[0.08] bg-navy-900/60 p-6 sm:p-8 hover:border-amber-500/40 hover:bg-amber-500/[0.04] transition-all shadow-[0_0_0_1px_rgba(251,191,36,0)] hover:shadow-[0_0_40px_rgba(251,191,36,0.08)]"
+                className="group relative flex flex-col rounded-3xl border border-white/[0.08] bg-navy-900/60 p-6 sm:p-7 hover:border-amber-500/40 hover:bg-amber-500/[0.04] transition-all shadow-[0_0_0_1px_rgba(251,191,36,0)] hover:shadow-[0_0_40px_rgba(251,191,36,0.08)]"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
@@ -176,7 +177,7 @@ export default function LandingPage() {
                   Lib Alexandria
                 </p>
                 <h4
-                  className="text-2xl sm:text-3xl font-bold tracking-tight mb-3"
+                  className="text-2xl font-bold tracking-tight mb-3"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   The ancient library, reimagined.
@@ -197,7 +198,7 @@ export default function LandingPage() {
                 href="https://mspsync.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col rounded-3xl border border-white/[0.08] bg-navy-900/60 p-6 sm:p-8 hover:border-amber-500/40 hover:bg-amber-500/[0.04] transition-all shadow-[0_0_0_1px_rgba(251,191,36,0)] hover:shadow-[0_0_40px_rgba(251,191,36,0.08)]"
+                className="group relative flex flex-col rounded-3xl border border-white/[0.08] bg-navy-900/60 p-6 sm:p-7 hover:border-amber-500/40 hover:bg-amber-500/[0.04] transition-all shadow-[0_0_0_1px_rgba(251,191,36,0)] hover:shadow-[0_0_40px_rgba(251,191,36,0.08)]"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
@@ -209,7 +210,7 @@ export default function LandingPage() {
                   MSPSync
                 </p>
                 <h4
-                  className="text-2xl sm:text-3xl font-bold tracking-tight mb-3"
+                  className="text-2xl font-bold tracking-tight mb-3"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   PSA-native knowledge for MSPs.
@@ -226,12 +227,113 @@ export default function LandingPage() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </a>
+              <a
+                href="https://card-dealer.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex flex-col rounded-3xl border border-white/[0.08] bg-navy-900/60 p-6 sm:p-7 hover:border-amber-500/40 hover:bg-amber-500/[0.04] transition-all shadow-[0_0_0_1px_rgba(251,191,36,0)] hover:shadow-[0_0_40px_rgba(251,191,36,0.08)]"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                    <Radar className="w-7 h-7 text-amber-400" />
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-slate-500 group-hover:text-amber-400 transition-colors" />
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-amber-400/80 mb-2">
+                  Card Dealer
+                </p>
+                <h4
+                  className="text-2xl font-bold tracking-tight mb-3"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Trading card inventory &amp; deal radar.
+                </h4>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-6 flex-1">
+                  A SaaS collector desk for Pokemon, Sports, MTG, and Marvel
+                  dealers. Tracks live portfolio value and multi-marketplace
+                  fees, scans eBay for undervalued listings against market
+                  comps, and fires automated Email, Discord, and Slack alerts.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400 group-hover:text-amber-300 transition-colors">
+                  Visit card-dealer.app
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Open Source / GitHub */}
+        <section id="github" className="border-b border-white/[0.06]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+            <div className="text-center mb-8 sm:mb-10">
+              <p className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-3">
+                Open Source
+              </p>
+              <h3
+                className="text-3xl sm:text-4xl font-bold tracking-tight mb-3"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                Explore the Code
+              </h3>
+              <p className="text-slate-400 max-w-lg mx-auto">
+                A selection of projects we&apos;ve published on GitHub: network
+                tooling, AI agents, and local AI.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+              {OPEN_SOURCE.map((repo) => (
+                <a
+                  key={repo.name}
+                  href={`${GITHUB_URL}/${repo.name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col rounded-2xl border border-white/[0.08] bg-navy-900/60 p-6 hover:border-amber-500/30 hover:bg-amber-500/[0.03] transition-all"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                      <GitHubMark className="w-5 h-5 text-amber-400" />
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-amber-400 transition-colors" />
+                  </div>
+                  <h4
+                    className="text-lg font-bold mb-1"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
+                    {repo.title}
+                  </h4>
+                  <p className="text-xs font-mono text-slate-500 mb-3">{repo.name}</p>
+                  <p className="text-sm text-slate-400 mb-4 flex-1">{repo.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {repo.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 rounded-md text-[11px] font-medium text-slate-300 bg-white/[0.04] border border-white/[0.06]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/[0.1] text-sm font-medium text-slate-200 hover:border-amber-500/40 hover:text-amber-300 transition-all"
+              >
+                <GitHubMark className="w-4 h-4" />
+                View all on GitHub
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>
 
         {/* About / Experience */}
-        <section className="border-y border-white/[0.06]">
+        <section className="border-b border-white/[0.06]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
@@ -351,29 +453,7 @@ export default function LandingPage() {
                 See our AI and full-stack builds in action. No signup required.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-              <Link
-                href="/extract"
-                className="group flex flex-col rounded-2xl border border-white/[0.08] bg-navy-900/60 p-6 hover:border-amber-500/30 hover:bg-amber-500/[0.03] transition-all"
-              >
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4">
-                  <FileText className="w-5 h-5 text-amber-400" />
-                </div>
-                <h4
-                  className="text-lg font-bold mb-1"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Document Extraction
-                </h4>
-                <p className="text-sm text-slate-400 mb-4 flex-1">
-                  Upload PDFs, text, or CSV files and get structured data back
-                  instantly. Batch processing and Excel export included.
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-amber-400 group-hover:text-amber-300 transition-colors">
-                  Launch demo
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </span>
-              </Link>
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto">
               <Link
                 href="/intake"
                 className="group flex flex-col rounded-2xl border border-white/[0.08] bg-navy-900/60 p-6 hover:border-amber-500/30 hover:bg-amber-500/[0.03] transition-all"
@@ -413,7 +493,7 @@ export default function LandingPage() {
                   className="text-lg font-bold mb-1"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  Booking & Payments Site
+                  Booking &amp; Payments Site
                 </h4>
                 <p className="text-sm text-slate-400 mb-4 flex-1">
                   A customizable full-stack booking platform with live calendar,
@@ -426,73 +506,6 @@ export default function LandingPage() {
                 </span>
               </a>
             </div>
-          </div>
-        </section>
-
-        {/* Open Source / GitHub */}
-        <section id="github" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
-          <div className="text-center mb-8 sm:mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-3">
-              Open Source
-            </p>
-            <h3
-              className="text-3xl sm:text-4xl font-bold tracking-tight mb-3"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Explore the Code
-            </h3>
-            <p className="text-slate-400 max-w-lg mx-auto">
-              A selection of projects we&apos;ve published on GitHub: network
-              tooling, AI agents, and local AI.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-            {OPEN_SOURCE.map((repo) => (
-              <a
-                key={repo.name}
-                href={`${GITHUB_URL}/${repo.name}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col rounded-2xl border border-white/[0.08] bg-navy-900/60 p-6 hover:border-amber-500/30 hover:bg-amber-500/[0.03] transition-all"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
-                    <GitHubMark className="w-5 h-5 text-amber-400" />
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-amber-400 transition-colors" />
-                </div>
-                <h4
-                  className="text-lg font-bold mb-1"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  {repo.title}
-                </h4>
-                <p className="text-xs font-mono text-slate-500 mb-3">{repo.name}</p>
-                <p className="text-sm text-slate-400 mb-4 flex-1">{repo.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {repo.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 rounded-md text-[11px] font-medium text-slate-300 bg-white/[0.04] border border-white/[0.06]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/[0.1] text-sm font-medium text-slate-200 hover:border-amber-500/40 hover:text-amber-300 transition-all"
-            >
-              <GitHubMark className="w-4 h-4" />
-              View all on GitHub
-              <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </section>
 
